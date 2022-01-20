@@ -1,0 +1,166 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor:DHT11 U2
+U 1 1 6192423A
+P 6350 3900
+F 0 "U2" H 6106 3946 50  0000 R CNN
+F 1 "DHT11" H 6106 3855 50  0000 R CNN
+F 2 "Sensor:Aosong_DHT11_5.5x12.0_P2.54mm" H 6350 3500 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 6500 4150 50  0001 C CNN
+	1    6350 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4100 5450 3850
+$Comp
+L Transistor_BJT:2N2219 Q1
+U 1 1 618DBD9E
+P 5350 4300
+F 0 "Q1" H 5540 4346 50  0000 L CNN
+F 1 "2N2219" H 5540 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 5550 4225 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 5350 4300 50  0001 L CNN
+	1    5350 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Raspberry_Pi_2_3 J1
+U 1 1 61927386
+P 7800 2800
+F 0 "J1" H 7800 4281 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 7800 4190 50  0000 C CNN
+F 2 "" H 7800 2800 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 7800 2800 50  0001 C CNN
+	1    7800 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 1500 7600 1300
+Wire Wire Line
+	7900 1500 7900 1150
+$Comp
+L Analog_ADC:MCP3008 U1
+U 1 1 61945BF4
+P 4000 2600
+F 0 "U1" H 4000 3281 50  0000 C CNN
+F 1 "MCP3008" H 4000 3190 50  0000 C CNN
+F 2 "" H 4100 2700 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21295d.pdf" H 4100 2700 50  0001 C CNN
+	1    4000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Motor_DC M1
+U 1 1 618DC8AF
+P 5450 3550
+F 0 "M1" H 5608 3546 50  0000 L CNN
+F 1 "Water Pump" H 5608 3455 50  0000 L CNN
+F 2 "" H 5450 3460 50  0001 C CNN
+F 3 "~" H 5450 3460 50  0001 C CNN
+	1    5450 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3900 6800 3900
+Wire Wire Line
+	6800 3900 6800 3400
+Wire Wire Line
+	6800 3400 7000 3400
+Wire Wire Line
+	7600 1300 6350 1300
+Wire Wire Line
+	5450 1300 5450 3350
+Wire Wire Line
+	6350 3600 6350 1300
+Connection ~ 6350 1300
+Wire Wire Line
+	6350 1300 5450 1300
+Wire Wire Line
+	5100 4300 5150 4300
+Wire Wire Line
+	8100 4100 8100 4700
+Wire Wire Line
+	5450 4500 5450 4700
+Connection ~ 5450 4700
+Wire Wire Line
+	5450 4700 6350 4700
+Wire Wire Line
+	6350 4200 6350 4700
+Connection ~ 6350 4700
+Wire Wire Line
+	6350 4700 8100 4700
+Wire Wire Line
+	7000 2600 4600 2600
+Wire Wire Line
+	3900 1150 3900 2100
+Wire Wire Line
+	4200 1150 4200 2100
+Connection ~ 4200 1150
+Wire Wire Line
+	4200 1150 5100 1150
+Wire Wire Line
+	3900 3200 3900 4700
+Wire Wire Line
+	3900 4700 4200 4700
+Wire Wire Line
+	4200 3200 4200 4700
+Connection ~ 4200 4700
+Wire Wire Line
+	4200 4700 5450 4700
+Wire Wire Line
+	4600 2700 7000 2700
+Wire Wire Line
+	7000 3300 4600 3300
+Wire Wire Line
+	4600 3300 4600 2800
+$Comp
+L DFRobot:SKU_SEN0114 S1
+U 1 1 619C8B6D
+P 2650 2150
+F 0 "S1" H 2833 2515 50  0000 C CNN
+F 1 "SKU_SEN0114" H 2833 2424 50  0000 C CNN
+F 2 "" H 2950 2150 50  0001 C CNN
+F 3 "" H 2950 2150 50  0001 C CNN
+	1    2650 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2050 3100 1150
+Wire Wire Line
+	3100 1150 3900 1150
+Connection ~ 3900 1150
+Wire Wire Line
+	3900 1150 4200 1150
+Wire Wire Line
+	3100 2300 3400 2300
+Wire Wire Line
+	2650 2450 2650 4700
+Wire Wire Line
+	2650 4700 3900 4700
+Connection ~ 3900 4700
+Wire Wire Line
+	5100 4300 5100 1150
+Connection ~ 5100 1150
+Wire Wire Line
+	5100 1150 7900 1150
+Wire Wire Line
+	4800 2800 4800 2500
+Wire Wire Line
+	4800 2500 4600 2500
+Wire Wire Line
+	4800 2800 7000 2800
+$EndSCHEMATC
